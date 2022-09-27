@@ -92,19 +92,17 @@ header {
 
 .navbar {
     padding: 45px 25px;
-}
-
-.link-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.link-container a {
-    margin: 0px 20px;
+.navbar a {
+    margin: 10px 0px;
     transition: .2s all ease-in-out;
 }
 
-.link-container a:hover {
+.navbar a:hover {
     color: #1e90ff;
     transform: scale(1.2);
 }
@@ -138,6 +136,7 @@ header {
     justify-content: center;
     height: var(--section-height);
     padding: 0px 12px;
+    text-align: center;
 }
 
 #conocimientos {
@@ -189,7 +188,7 @@ header {
 }
 
 #redes .container .container-i-redes a i {
-    margin: 5px 25px;
+    margin: 10px 25px;
 }
 
 .fa-linkedin:hover {
@@ -228,4 +227,21 @@ header {
     color: #ff0000;
     font-size: 1.1em;
     margin: 0px 10px;
+}
+
+@media (min-width: 720px) {
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    .navbar a {
+        margin: 0px 20px;
+    }
 }
