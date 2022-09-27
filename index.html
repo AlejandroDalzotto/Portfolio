@@ -6,84 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/bfb6fc744a.js" crossorigin="anonymous"></script>
     <title>Alejandro Dalzotto - Portfolio</title>
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <div>
-                <ul class="list">
-                    <li class="list-item">
-                        <a href="#sobre-mi" class="link">Sobre mí</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#conocimientos" class="link">Conocimientos</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#redes" class="link">Redes</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="mailto:aledalzotto15@gmail.com" class="link">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="toggle-container">
-                <button class="theme-btn light btn-light" onclick="setTheme('light')" title="Light mode">Light mode</button>
-                <button class="theme-btn dark btn-dark" onclick="setTheme('dark')" title="Dark mode">Dark mode</button>
-            </div>
-        </nav>
-        <header class="header">
-            <div class="div-title">
+
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="link-container">
+                    <a href="#sobre-mi" class="link">Sobre mí</a>
+                    <a href="#conocimientos" class="link">Conocimientos</a>
+                    <a href="https://github.com/AlejandroDalzotto?tab=repositories" target="_blank"
+                        class="link">Proyectos</a>
+                    <a href="#redes" class="link">Redes</a>
+                    <a href="mailto:aledalzotto15@gmail.com" class="link">Contacto</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+
+        <article id="hero">
+            <div class="container">
                 <h1 class="title">Portfolio de Presentación</h1>
-                <p class="paragraph">Hola, mi nombre es Alejandro Dalzotto, y soy programador Full Stack.
+                <p>Hola, mi nombre es <span class="color-hover">Alejandro Dalzotto</span>, y soy programador Full Stack.
                 </p>
             </div>
-            <img src="imgs-pag/back-front-img.png" class="img-h">
-        </header>
-        <section class="section">
-            <article class="presentacion">
-                <h1 id="sobre-mi">Sobre mí</h1>
-                <p class="paragraph-p">Soy programador Full Stack que está transitando la etapa de estudiante, soy un
-                    aprendiz de desarrollo de software, y mi meta es convertirme en desarrollador web de alto nivel, más
+        </article>
+
+        <article id="sobre-mi">
+            <div class="container">
+                <h1>Sobre mí</h1>
+                <p>Soy programador Full Stack que está transitando la etapa de estudiante, soy un
+                    aprendiz de desarrollo de software, y mi meta es convertirme en desarrollador de alto nivel, más
                     específicamente en el área de Frontend con HTML, CSS y JavaScript.</p>
-            </article>
-            <hr>
-            <article class="conocimientos">
-                <h1 id="conocimientos">Conocimientos</h1>
+            </div>
+        </article>
+
+        <article id="conocimientos">
+            <div class="container">
+                <h1>Conocimientos</h1>
                 <p>En esta sección puedes observar cada una de las tecnologías que trabajo hasta el momento.</p>
-                <div class="container-img">
-                    <img src="img-icons/java-icon.png" class="img-skills">
-                    <img src="img-icons/spring-icon.png" class="img-skills">
-                    <img src="img-icons/angular-icon.png" class="img-skills">
-                    <img src="img-icons/mysql-icon.png" class="img-skills">
-                    <img src="img-icons/html-icon.png" class="img-skills">
-                    <img src="img-icons/css-icon.png" class="img-skills">
-                    <img src="img-icons/js-icon.png" class="img-skills">
+                <div class="container-skills">
+                    <i class="fa-brands fa-java icon-skill"></i>
+                    <i class="fa-brands fa-html5 icon-skill"></i>
+                    <i class="fa-brands fa-css3-alt icon-skill"></i>
+                    <i class="fa-brands fa-square-js icon-skill"></i>
+                    <i class="fa-brands fa-angular icon-skill"></i>
+                    <i class="fa-brands fa-git-alt icon-skill"></i>
                 </div>
-            </article>
-            <hr>
-            <article class="redes">
-                <h1 id="redes">Redes</h1>
+            </div>
+
+        </article>
+
+        <article id="redes">
+            <div class="container">
+                <h1>Redes</h1>
                 <p>Estas son mis redes personales.</p>
-                <div class="container-img-redes">
+
+                <div class="container-i-redes">
                     <a href="https://www.linkedin.com/in/alejandro-dalzotto-44214a24b/" target="_blank">
-                        <img src="img-redes/linkedin-logo.png" class="img-redes">
+                        <i class="fa-brands fa-linkedin icono-redes"></i>
                     </a>
                     <a href="https://www.facebook.com/alejandro.dalzotto.1/" target="_blank">
-                        <img src="img-redes/face-logo.png" class="img-redes" style="border-radius: 18px;">
+                        <i class="fa-brands fa-facebook icono-redes"></i>
                     </a>
                     <a href="https://www.instagram.com/alejandrodalzotto/" target="_blank">
-                        <img src="img-redes/Insta-logo.png" class="img-redes">
+                        <i class="fa-brands fa-instagram icono-redes"></i>
                     </a>
                     <a href="https://github.com/AlejandroDalzotto" target="_blank">
-                        <img src="img-redes/github-logo.png" class="img-redes">
+                        <i class="fa-brands fa-github icono-redes"></i>
                     </a>
                 </div>
-            </article>
-        </section>
-    </div>
-    <script src="script.js"></script>
+            </div>
+        </article>
+
+    </section>
+
+    <script defer src="script.js"></script>
 </body>
 
 </html>
