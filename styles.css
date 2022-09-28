@@ -44,41 +44,39 @@ a {
     font-size: 50px;
 }
 
-i {
+.icono-redes, .icon-skill {
     width: 75px;
     height: 75px;
     font-size: 75px;
     transition: .1s all ease-in-out;
 }
 
-.fa-java:hover {
-    transform: scale(1.2);
+.fa-java {
     color: #ff0000;
 }
 
-.fa-html5:hover {
-    transform: scale(1.2);
+.fa-html5 {
     color: #ef6e18;
 }
 
-.fa-css3-alt:hover {
-    transform: scale(1.2);
+.fa-css3-alt {
     color: #00aaff;
 }
 
-.fa-square-js:hover {
-    transform: scale(1.2);
+.fa-square-js {
     color: #ffff00;
 }
 
-.fa-angular:hover {
-    transform: scale(1.2);
+.fa-angular {
     color: #a80000;
 }
 
-.fa-git-alt:hover {
-    transform: scale(1.2);
+.fa-git-alt {
     color: #ff8000;
+}
+
+.icon-skill:hover {
+    transform: scale(1.2);
 }
 
 .container {
@@ -165,7 +163,7 @@ header {
     height: 300px;
 }
 
-#conocimientos .container-skills i {
+#conocimientos .container-skills .icon-skill {
     margin: 10px 25px;
 }
 
@@ -187,7 +185,7 @@ header {
     height: 200px;
 }
 
-#redes .container .container-i-redes a i {
+#redes .container-i-redes a i {
     margin: 10px 25px;
 }
 
@@ -227,6 +225,11 @@ header {
     color: #ff0000;
     font-size: 1.1em;
     margin: 0px 10px;
+}
+
+.spring-boot-i, .mysql-i {
+    width: 75px;
+    height: 75px;
 }
 
 @media (min-width: 720px) {
