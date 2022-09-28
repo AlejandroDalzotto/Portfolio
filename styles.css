@@ -85,7 +85,7 @@ a {
 }
 
 header {
-    background-color: var(--bg-color);
+    background-color: rgba(31, 31, 31, 0.95);
 }
 
 .navbar {
@@ -148,7 +148,7 @@ header {
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)),
-        url('imgs-pag/conocimientos-wallpaper-2.jpg');
+        url("imgs-pag/conocimientos-wallpaper-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
