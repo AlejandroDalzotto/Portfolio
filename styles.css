@@ -223,6 +223,7 @@ header {
 
 .color-hover:hover {
     color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
     font-size: 1.1em;
     margin: 0px 10px;
 }
