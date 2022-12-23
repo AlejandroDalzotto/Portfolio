@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" translate="no">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,81 +7,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/bfb6fc744a.js" crossorigin="anonymous"></script>
+    <!-- <script defer src="https://app.embed.im/snow.js"></script> -->
     <title>Alejandro Dalzotto - Portfolio</title>
 </head>
 
-<body>
-
+<body class="scroll">
     <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="#hero">Inicio</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#conocimientos">Conocimientos</a>
-                <a href="https://github.com/AlejandroDalzotto?tab=repositories" target="_blank">Proyectos</a>
-                <a href="#redes">Redes</a>
-                <a href="mailto:aledalzotto15@gmail.com">Contacto</a>
-            </nav>
+        <div class="nav">
+            <button id="btn" class="btn-nav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a class="link-cv"
+                href="https://files.deply.dev/files/cab085f3-8dbf-46fd-9377-0479dcc76377-457a2be9-f9fe-4654-a5e6-2acc912ad67f-CV_V2.pdf"
+                target="_blank">Curriculum</a>
         </div>
+
+        <nav id="nav" class="navbar">
+            <img class="wallpaper-nav" src="imgs/flower.png">
+            <ul class="list">
+                <li class="list-item">
+                    <a href="#hero" class="link"><i class="fa-solid fa-house"></i> Inicio</a>
+                </li>
+                <li class="list-item">
+                    <a href="#about" class="link"><i class="fa-solid fa-user"></i> Sobre mí</a>
+                </li>
+                <li class="list-item">
+                    <a href="#skills" class="link"><i class="fa-solid fa-lightbulb"></i> Conocimientos</a>
+                </li>
+                <li class="list-item">
+                    <a href="#projects" class="link"><i class="fa-solid fa-seedling"></i> Proyectos</a>
+                </li>
+                <li class="list-item">
+                    <a href="#networks" class="link"><i class="fa-solid fa-globe"></i> Redes</a>
+                </li>
+            </ul>
+        </nav>
+
     </header>
 
     <section class="section">
 
         <article id="hero">
-            <div class="container">
-                <h1 class="title">Portfolio de Presentación</h1>
-                <p>Hola, mi nombre es <span class="color-hover">Alejandro Dalzotto</span>, y soy programador Full Stack.
-                </p>
+
+            <div class="container container-hero">
+                <img class="profile" src="imgs/profile.jpg" alt="picture">
+                <h1 class="hero-title">Portafolio de Presentación</h1>
+                <p class="paragraph">Hola, mi nombre es Alejandro Dalzotto, y soy programador Full Stack.</p>
             </div>
+
         </article>
 
-        <article id="sobre-mi">
+        <article id="about">
             <div class="container">
-                <h1>Sobre mí</h1>
-                <p>Soy programador Full Stack y aprendiz de desarrollo de software desde hace 2 años. Mi meta es mejorar mi nivel como desarrollador, más específicamente en el área de Frontend con HTML, CSS y JavaScript. Soy de Argentina y actualmente estoy cursando la carrera de Técnico Superior en Programación en la Universidad Tecnológica Nacional.</p>
+                <h2 class="title">Sobre mí</h2>
+                <p class="paragraph">Soy programador Full Stack y aprendiz de
+                    desarrollo de software desde hace 2 años. Mi
+                    meta es mejorar mi nivel como desarrollador. Soy proactivo, confiable, me gusta trabajar en
+                    equipo, aprender sobre las nuevas tecnologías y
+                    siempre dar mi mejor esfuerzo.</p>
             </div>
+
         </article>
 
-        <article id="conocimientos">
+        <article id="skills">
+
             <div class="container">
-                <h1>Conocimientos</h1>
-                <p>En esta sección puedes observar cada una de las tecnologías que trabajo hasta el momento.</p>
-                <div class="container-skills">
-                    <i class="fa-brands fa-java icon-skill"></i>
-                    <i class="fa-brands fa-html5 icon-skill"></i>
-                    <i class="fa-brands fa-css3-alt icon-skill"></i>
-                    <i class="fa-brands fa-square-js icon-skill"></i>
-                    <i class="fa-brands fa-angular icon-skill"></i>
-                    <i class="fa-brands fa-git-alt icon-skill"></i>
-                    <img src="img-icons/spring-icon.png" class="spring-boot-i icon-skill">
-                    <img src="img-icons/mysql-icon.png" class="mysql-i icon-skill">
+                <h2 class="title">Conocimientos</h2>
+                <p class="paragraph">En esta sección puedes observar cada una de las tecnologías que trabajo hasta el
+                    momento.</p>
+                <div class="skills-container">
+                    <div class="icon-container">
+                        <i class="fa-brands fa-java skill-icon"></i>
+                        <p class="icon-name">Java</p>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-brands fa-html5 skill-icon"></i>
+                        <p class="icon-name">HTML</p>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-brands fa-css3-alt skill-icon"></i>
+                        <p class="icon-name">CSS</p>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-brands fa-square-js skill-icon"></i>
+                        <p class="icon-name">JavaScript</p>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-brands fa-angular skill-icon"></i>
+                        <p class="icon-name">Angular</p>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-brands fa-git-alt skill-icon"></i>
+                        <p class="icon-name">Git</p>
+                    </div>
+                    <div class="icon-container">
+                        <img src="icons/springboot.png" class="spring-boot-i skill-icon">
+                        <p class="icon-name">Spring Boot</p>
+                    </div>
+                    <div class="icon-container">
+                        <img src="icons/mysql.png" class="mysql-i skill-icon">
+                        <p class="icon-name">MySQL</p>
+                    </div>
+
                 </div>
             </div>
+
         </article>
 
-        <article id="redes">
+        <article id="projects">
             <div class="container">
-                <h1>Redes</h1>
-                <p>Estas son mis redes personales.</p>
+                <h2 class="title">Proyectos</h2>
+                <div class="cards-container">
+                    <div class="card card-1">
+                        <a class="card-link" href="https://github.com/WaldoCuevas/StockTracking" target="_blank" rel="noopener noreferrer">StockTracking</a>
+                    </div>
+                    <div class="card card-2">
+                        <a class="card-link" href="https://comunicate-con-nosotros.herokuapp.com/home" target="_blank" rel="noopener noreferrer">Comunicate</a>
+                    </div>
+                </div>
+            </div>
 
-                <div class="container-i-redes">
-                    <a href="https://www.linkedin.com/in/alejandro-dalzotto-44214a24b/" target="_blank">
-                        <i class="fa-brands fa-linkedin icono-redes"></i>
+        </article>
+
+        <article id="networks">
+
+            <div class="container">
+                <h2 class="title">Redes</h2>
+                <p class="paragraph">Estas son mis redes personales.</p>
+
+                <div class="container-networks">
+                    <a class="icon-networks" href="https://www.linkedin.com/in/alejandro-dalzotto-44214a24b/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="https://www.facebook.com/alejandro.dalzotto.1/" target="_blank">
-                        <i class="fa-brands fa-facebook icono-redes"></i>
+                    <a class="icon-networks" href="https://www.facebook.com/alejandro.dalzotto.1/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/alejandrodalzotto/" target="_blank">
-                        <i class="fa-brands fa-instagram icono-redes"></i>
+                    <a class="icon-networks" href="https://www.instagram.com/alejandrodalzotto/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://github.com/AlejandroDalzotto" target="_blank">
-                        <i class="fa-brands fa-github icono-redes"></i>
+                    <a class="icon-networks" href="https://github.com/AlejandroDalzotto" target="_blank">
+                        <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
             </div>
+
         </article>
 
     </section>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
