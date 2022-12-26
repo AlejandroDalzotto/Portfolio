@@ -35,10 +35,14 @@ body {
     background-attachment: fixed;
 }
 
-h1, h2, .paragraph, label, a, button{
+h1,
+h2,
+.paragraph,
+label,
+a,
+button {
     color: var(--text-color-white);
     text-align: center;
-    text-shadow: 0 0 10px #000000a5;
 }
 
 .hero-title {
@@ -112,7 +116,6 @@ article {
     position: fixed;
     z-index: -1;
     opacity: 0.33;
-    left: -20%;
 }
 
 .navbar {
@@ -133,7 +136,6 @@ article {
 }
 
 .link {
-    text-shadow: 0px 0px 15px 5px #00000075;
     text-decoration: none;
 }
 
@@ -192,7 +194,7 @@ article {
 
 #about {
     background-color: #1a1a1a;
-    background-image: linear-gradient(0deg,#000000bf, #000000bf),url('imgs/about-wallpaper.png');
+    background-image: linear-gradient(0deg, #000000bf, #000000bf), url('imgs/about-wallpaper.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -237,7 +239,6 @@ article {
 .icon-name {
     color: var(--text-color-white);
     font-weight: bold;
-    text-shadow: 0px 0px 15px 5px #00000075;
     padding: 0px 10px;
     background-color: #00000020;
     border-radius: 5px;
@@ -287,7 +288,6 @@ article {
 }
 
 .card-link {
-    text-shadow: 0px 0px 15px 5px #00000075;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -314,4 +314,151 @@ article {
     padding: 15px 10px;
 }
 
+/* Media queries for Desktop */
 
+@media (min-width:1000px) {
+
+    .container {
+        padding: 0px 20px;
+    }
+
+    /* Navbar Desktop */
+
+    .btn-nav {
+        display: none;
+    }
+
+    .navbar {
+        background-color: transparent;
+        backdrop-filter: none;
+        height: auto;
+        position: relative;
+        left: 0;
+        margin-top: 0;
+        opacity: 1;
+    }
+
+    .link-cv {
+        position: fixed;
+        right: 1vw;
+        top: 95vh;
+        background-color: #0a0a0a;
+    }
+
+    .wallpaper-nav {
+        display: none;
+    }
+
+    .list {
+        height: 55px;
+        padding: 1px 20px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+        position: fixed;
+    }
+
+    /* Hero Desktop */
+
+    .container-hero {
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 60px;
+    }
+
+    .hero-title {
+        text-align: start;
+    }
+
+    .profile {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
+    /* About Desktop */
+
+    #about .container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    #about .container .title {
+        font-size: 3em;
+        text-align: start;
+    }
+
+    #about .container .paragraph {
+        text-align: start;
+    }
+
+    /* Skills Desktop */
+
+    .skill-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 75px;
+    }
+
+    .skills-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+
+    .icon-container {
+        gap: 10px;
+    }
+
+    #skills .container .title,
+    #skills .container .paragraph {
+        text-align: start;
+        margin: 40px 0px;
+    }
+
+    #skills .container .title {
+        font-size: 3em;
+    }
+
+    /* Projects Desktop */
+
+    #projects .container .title {
+        font-size: 3em;
+        margin-bottom: 100px;
+    }
+
+    /* Networks Desktop */
+
+    .icon-networks {
+        width: 75px;
+        height: 75px;
+        font-size: 75px;
+        transition: transform .1s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon-networks:hover {
+        transform: scale(1.2);
+    }
+    
+    #networks .container .title, #networks .container .paragraph {
+        text-align: start;
+        margin: 20px 0px;
+    }
+
+    #networks .container {
+        width: 80%;
+    }
+
+    .container-networks {
+        gap: 120px;
+    }
+
+
+
+}
