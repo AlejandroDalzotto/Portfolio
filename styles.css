@@ -137,6 +137,11 @@ article {
 
 .link {
     text-decoration: none;
+    transition: color .15s ease-in-out;
+}
+
+.link:hover {
+    color: #a1f800;
 }
 
 .list {
@@ -175,7 +180,6 @@ article {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    box-shadow: 0 0 30px #000000a5;
     transition: .3s transform ease-in-out;
 }
 
@@ -198,9 +202,9 @@ article {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 0px 15px 5px #00000075;
-    -webkit-box-shadow: 0px 0px 15px 5px #00000075;
-    -moz-box-shadow: 0px 0px 15px 5px #00000075;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
 }
 
 /* Skills */
@@ -248,9 +252,9 @@ article {
 
 #projects {
     background-image: linear-gradient(to right, #0a0a0a, #2a2a2a);
-    box-shadow: 0px 0px 15px 5px #00000075;
-    -webkit-box-shadow: 0px 0px 15px 5px #00000075;
-    -moz-box-shadow: 0px 0px 15px 5px #00000075;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
 }
 
 .cards-container {
@@ -298,15 +302,30 @@ article {
 
 /* Networks */
 
-.icon-networks {
-    width: 55px;
-    height: 55px;
-    font-size: 55px;
-    color: #fff;
+.containet-net {
+    width: 90px;
+    height: 90px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link-network {
     text-decoration: none;
+    font-weight: 600;
+}
+
+.icon-network {
+    font-size: 70px;
+    color: #fff;
 }
 
 .container-networks {
+    margin-top: 45px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -326,6 +345,11 @@ article {
 
     .btn-nav {
         display: none;
+    }
+
+    .nav {
+        backdrop-filter: none;
+        background-color: #0a0a0a;
     }
 
     .navbar {
@@ -445,8 +469,9 @@ article {
     .icon-networks:hover {
         transform: scale(1.2);
     }
-    
-    #networks .container .title, #networks .container .paragraph {
+
+    #networks .container .title,
+    #networks .container .paragraph {
         text-align: start;
         margin: 20px 0px;
     }
