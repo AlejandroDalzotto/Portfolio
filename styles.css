@@ -181,6 +181,9 @@ article {
     height: 100px;
     border-radius: 50%;
     transition: .3s transform ease-in-out;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
 }
 
 .profile:hover {
@@ -312,16 +315,37 @@ article {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    transition: transform .1s ease-in-out;
 }
 
 .link-network {
     text-decoration: none;
     font-weight: 600;
+    transition: 0s text-decoration ease;
 }
 
 .icon-network {
     font-size: 70px;
     color: #fff;
+    transition: 0s ease-in-out all;
+}
+
+.fa-instagram:hover {
+    background: -webkit-linear-gradient(#fdf497, #fd5949, #d6249f, #285AEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-facebook:hover {
+    color: #007bff;
+}
+
+.fa-linkedin:hover {
+    color: #00b3ff;
+}
+
+.fa-github:hover {
+    color: #cfcfcf;
 }
 
 .container-networks {
@@ -456,17 +480,7 @@ article {
 
     /* Networks Desktop */
 
-    .icon-networks {
-        width: 75px;
-        height: 75px;
-        font-size: 75px;
-        transition: transform .1s ease-in-out;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .icon-networks:hover {
+    .containet-net:hover {
         transform: scale(1.2);
     }
 
@@ -484,6 +498,8 @@ article {
         gap: 120px;
     }
 
-
+    .link-network:hover {
+        text-decoration: underline;
+    }
 
 }
