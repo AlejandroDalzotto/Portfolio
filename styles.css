@@ -273,7 +273,6 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #203A43;
     width: 90%;
     height: 27vh;
     min-width: 240px;
@@ -283,7 +282,9 @@ article {
     border-radius: 10px;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 125%;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
 }
 
 .card-1 {
@@ -295,12 +296,28 @@ article {
 }
 
 .card-link {
+    width: 50%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
     padding: 3px 7px;
     background-color: #00000080;
     border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.paragraph-project {
+    margin-top: 20px;
+    display: none;
+    transition: all .3s ease-in-out;
+    text-align: start;
+    font-weight: 100;
+    font-size: 15px;
 }
 
 /* Networks */
@@ -328,24 +345,6 @@ article {
     font-size: 70px;
     color: #fff;
     transition: 0s ease-in-out all;
-}
-
-.fa-instagram:hover {
-    background: -webkit-linear-gradient(#fdf497, #fd5949, #d6249f, #285AEB);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.fa-facebook:hover {
-    color: #007bff;
-}
-
-.fa-linkedin:hover {
-    color: #00b3ff;
-}
-
-.fa-github:hover {
-    color: #cfcfcf;
 }
 
 .container-networks {
@@ -476,6 +475,20 @@ article {
     #projects .container .title {
         font-size: 3em;
         margin-bottom: 100px;
+    }
+
+    .card:hover {
+        background-size: 145%;
+    }
+
+    .card:hover > .card-link {
+        width: 80%;
+        height: 80%;
+        background-color: rgba(0, 0, 0, 0.90);
+    }
+
+    .card:hover > .card-link > .paragraph-project {
+        display: block;
     }
 
     /* Networks Desktop */
