@@ -273,7 +273,7 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 95%;
     height: 27vh;
     min-width: 240px;
     min-height: 135px;
@@ -282,7 +282,7 @@ article {
     border-radius: 10px;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 125%;
+    background-size: 175%;
     transition: all .3s ease-in-out;
     overflow: hidden;
 }
@@ -296,7 +296,7 @@ article {
 }
 
 .card-link {
-    width: 50%;
+    width: 65%;
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -320,6 +320,20 @@ article {
     font-size: 15px;
 }
 
+.card:hover {
+    background-size: 200%;
+}
+
+.card:hover>.card-link {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.90);
+}
+
+.card:hover>.card-link>.paragraph-project {
+    display: block;
+}
+
 /* Networks */
 
 .containet-net {
@@ -333,6 +347,10 @@ article {
     flex-direction: column;
     gap: 20px;
     transition: transform .1s ease-in-out;
+}
+
+.containet-net:hover {
+    transform: scale(1.2);
 }
 
 .link-network {
@@ -355,6 +373,8 @@ article {
     gap: 50px;
     padding: 15px 10px;
 }
+
+
 
 /* Media queries for Desktop */
 
@@ -477,25 +497,7 @@ article {
         margin-bottom: 100px;
     }
 
-    .card:hover {
-        background-size: 145%;
-    }
-
-    .card:hover > .card-link {
-        width: 80%;
-        height: 80%;
-        background-color: rgba(0, 0, 0, 0.90);
-    }
-
-    .card:hover > .card-link > .paragraph-project {
-        display: block;
-    }
-
     /* Networks Desktop */
-
-    .containet-net:hover {
-        transform: scale(1.2);
-    }
 
     #networks .container .title,
     #networks .container .paragraph {
