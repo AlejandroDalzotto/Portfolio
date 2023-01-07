@@ -161,6 +161,10 @@ article {
     transition: color .15s ease-in-out;
 }
 
+.active-link {
+    color: #a1f800;
+}
+
 .link:hover {
     color: #a1f800;
 }
@@ -377,10 +381,11 @@ article {
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    transition: transform .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 .containet-net:hover {
+    text-shadow: 0 0 15px #ffffffd4;
     transform: scale(1.2);
 }
 
@@ -485,6 +490,7 @@ article {
         from {
             opacity: .05;
         }
+
         to {
             opacity: .34;
         }
