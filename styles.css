@@ -239,40 +239,58 @@ article {
 /* Skills */
 
 #skills {
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
-.skill-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 55px;
-    color: #fff;
+#skills .container {
+    width: 80vw;
+}
+
+.title-skills {
+    margin-bottom: 50px;
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 .skills-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 15px 10px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+figure .img-skill {
+    width: 200px;
+    height: 200px;
+    display: none;
+}
+
+.skill-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: #fff;
+}
+
+#skills .container .title {
+    margin-top: 50px;
 }
 
 .icon-container {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
     text-align: center;
-    width: 100px;
-    height: 160px;
-    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 5px;
-    border-radius: 10px;
-    transition: transform .2s ease-in-out;
-}
-
-.icon-container:hover {
-    transform: scale(1.1);
+    padding: 15px 0px;
+    min-width: 250px;
+    height: 50px;
 }
 
 .icon-name {
@@ -281,6 +299,44 @@ article {
     padding: 0px 10px;
     background-color: #00000020;
     border-radius: 5px;
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.front-title {
+    animation: front-animation 4s alternate infinite ease-in-out;
+}
+
+.back-title {
+    animation: back-animation 5.5s alternate infinite ease-in-out;
+}
+
+@keyframes back-animation {
+    from {
+        color: #009FFF;
+        text-shadow: 0 0 30px #009FFF;
+    }
+
+    to {
+        color: #ec2F4B;
+        text-shadow: 0 0 30px #ec2F4B;
+    }
+}
+
+@keyframes front-animation {
+    from {
+        color: #fc4a1a;
+        text-shadow: 0 0 30px #fc4a1a;
+    }
+
+    to {
+        color: #f7b733;
+        text-shadow: 0 0 30px #f7b733;
+    }
 }
 
 /* Projects */
@@ -543,32 +599,38 @@ article {
 
     /* Skills Desktop */
 
-    .skill-icon {
-        width: 75px;
-        height: 75px;
-        font-size: 75px;
+    .skills-container {
+        gap: 0px;
     }
 
-    .skills-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 100px;
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
     }
 
     .icon-container {
         gap: 10px;
-        width: 115px;
-    }
-
-    #skills .container .title,
-    #skills .container .paragraph {
-        text-align: start;
-        margin: 40px 0px;
     }
 
     #skills .container .title {
         font-size: 3em;
+    }
+
+    figure .img-skill {
+        display: inline-block;
+    }
+
+    .backend figure,
+    .frontend figure {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .frontend figure {
+        flex-direction: row-reverse;
     }
 
     /* Projects Desktop */
