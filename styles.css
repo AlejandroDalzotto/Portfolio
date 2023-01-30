@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 /* Inicialización */
 
@@ -6,29 +6,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Propiedades */
-
-@property --gradiert-bg-skill-container-1 {
-    syntax: '<color>';
-    initial-value: #0000;
-    inherits: false;
-}
-
-@property --gradiert-bg-skill-container-2 {
-    syntax: '<color>';
-    initial-value: #0000;
-    inherits: false;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 :root {
 
     /* paleta de colores */
-    --default-background_color: #1a1a1a;
-    --gradient-background-color: linear-gradient(to top, #0F2027, #203A43, #2C5364);
+    --default-background_color: #111111;
+    --gradient-background-color: linear-gradient(to top, #2b221c, #a27456);
     --text-color-white: #efefef;
+    --section-color: #111111;
+    --link-color: #a78976;
 
     /* Scroll */
     --scroll-size: 16px;
@@ -66,15 +54,17 @@ button {
 }
 
 .title {
-    font-size: 1.9em;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-decoration: underline;
 }
 
 .paragraph {
+    font-weight: 300;
     font-size: 1.2em;
 }
 
 article {
-    min-height: 95vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -135,11 +125,13 @@ article {
 
 .wallpaper-nav {
     position: fixed;
+    right: 30px;
     z-index: -1;
     opacity: 0.33;
 }
 
 .navbar {
+    z-index: 1;
     width: 100%;
     backdrop-filter: blur(4px);
     background-color: #000000bf;
@@ -162,11 +154,11 @@ article {
 }
 
 .active-link {
-    color: #a1f800;
+    color: var(--link-color);
 }
 
 .link:hover {
-    color: #a1f800;
+    color: var(--link-color);
 }
 
 .list {
@@ -201,6 +193,10 @@ article {
 
 /* Estilos especificos */
 
+#hero {
+    min-height: 95vh;
+}
+
 .profile {
     width: 100px;
     height: 100px;
@@ -229,7 +225,8 @@ article {
 /* About */
 
 #about {
-    background-color: #1a1a1a;
+    min-height: 500px;
+    background-color: var(--section-color);
     background-image: linear-gradient(0deg, #000000bf, #000000bf), url('imgs/about-wallpaper.png');
     background-position: center center;
     background-repeat: no-repeat;
@@ -240,6 +237,10 @@ article {
 }
 
 /* Skills */
+
+#skills {
+    min-height: 80vh;
+}
 
 .skill-icon {
     width: 55px;
@@ -262,20 +263,16 @@ article {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(to top, var(--gradiert-bg-skill-container-1), var(--gradiert-bg-skill-container-2));
     width: 100px;
     height: 160px;
     padding: 10px 10px;
     gap: 5px;
     border-radius: 10px;
-    transition: --gradiert-bg-skill-container-1 .2s ease-in-out, --gradiert-bg-skill-container-2 .2s ease-in-out, all .2s ease-in-out;
+    transition: transform .2s ease-in-out;
 }
 
 .icon-container:hover {
-    --gradiert-bg-skill-container-1: #19547b;
-    --gradiert-bg-skill-container-2: #95845a;
     transform: scale(1.1);
-    box-shadow: 0 0 20px #00000080;
 }
 
 .icon-name {
@@ -289,10 +286,7 @@ article {
 /* Projects */
 
 #projects {
-    background-image: linear-gradient(to right, #0a0a0a, #2a2a2a);
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    min-height: 80vh;
 }
 
 .cards-container {
@@ -317,7 +311,11 @@ article {
     border-radius: 10px;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 175%;
+    background-size: 150%;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    background-image: linear-gradient(to right, #0a0a0a, #2a2a2a);
     transition: all .3s ease-in-out;
     overflow: hidden;
 }
@@ -331,13 +329,13 @@ article {
 }
 
 .card-link {
+    color: #f0f0f0;
     width: 65%;
     height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     font-weight: bold;
     font-size: 20px;
     padding: 3px 7px;
@@ -346,17 +344,22 @@ article {
     transition: all .3s ease-in-out;
 }
 
-.paragraph-project {
+.link-project {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.link-project:hover {
+    text-shadow: 0 0 10px #f0f0f0;
+}
+
+.project-info {
     margin-top: 20px;
     display: none;
     transition: all .3s ease-in-out;
     text-align: start;
     font-weight: 100;
-    font-size: 15px;
-}
-
-.card:hover {
-    background-size: 200%;
+    font-size: 20px;
 }
 
 .card:hover>.card-link {
@@ -365,15 +368,32 @@ article {
     background-color: rgba(0, 0, 0, 0.90);
 }
 
-.card:hover>.card-link>.paragraph-project {
-    display: block;
+.card:hover>.card-link>.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 /* Networks */
 
+#networks {
+    min-height: 200px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+    background-color: var(--section-color);
+}
+
+#networks .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
 .containet-net {
-    width: 90px;
-    height: 90px;
+    width: 35px;
+    height: 35px;
     padding: 20px;
     text-align: center;
     display: flex;
@@ -390,23 +410,20 @@ article {
 }
 
 .link-network {
-    text-decoration: none;
-    font-weight: 600;
     transition: 0s text-decoration ease;
 }
 
 .icon-network {
-    font-size: 70px;
+    font-size: 2em;
     color: #fff;
     transition: 0s ease-in-out all;
 }
 
 .container-networks {
-    margin-top: 45px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 15px;
     padding: 15px 10px;
 }
 
@@ -428,7 +445,7 @@ article {
 
     .nav {
         backdrop-filter: none;
-        background-color: #0a0a0a;
+        background-color: var(--section-color);
     }
 
     .navbar {
@@ -574,11 +591,7 @@ article {
     }
 
     .container-networks {
-        gap: 120px;
-    }
-
-    .link-network:hover {
-        text-decoration: underline;
+        gap: 30px;
     }
 
 }

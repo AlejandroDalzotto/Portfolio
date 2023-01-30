@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" translate="no">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/bfb6fc744a.js" crossorigin="anonymous"></script>
     <title>Alejandro Dalzotto - Portfolio</title>
 </head>
@@ -15,11 +17,13 @@
     <header>
         <div class="nav">
             <button id="btn" class="btn-nav">
-                <i class="fa-solid fa-bars"></i>
+                <span>
+                    <i class="fa-solid fa-bars"></i>
+                </span>
             </button>
             <a class="link-cv"
                 href="https://files.deply.dev/files/cab085f3-8dbf-46fd-9377-0479dcc76377-457a2be9-f9fe-4654-a5e6-2acc912ad67f-CV_V2.pdf"
-                target="_blank">Curriculum</a>
+                target="_blank" title="Ver CV">Curriculum</a>
         </div>
 
         <nav id="nav" class="navbar">
@@ -50,8 +54,8 @@
         <article id="hero">
             <img class="wallpaper-hero" src="imgs/hero-wallpaper.png" alt="wallpaper_hero">
             <div class="container container-hero">
-                <img class="profile" src="imgs/profile.jpg" alt="picture">
-                <div>
+                <img data-aos="fade-left" data-aos-duration="900" class="profile" src="imgs/profile.jpg" alt="picture">
+                <div data-aos="fade-right" data-aos-duration="900">
                     <h1 class="hero-title">Portafolio de Presentación</h1>
                     <p class="paragraph">Hola, mi nombre es Alejandro Dalzotto, y soy programador Full Stack.</p>
                 </div>
@@ -60,9 +64,9 @@
         </article>
 
         <article id="about">
-            <div class="container">
+            <div class="container" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="title">Sobre mí</h2>
-                <p class="paragraph">Soy programador Full Stack y aprendiz de
+                <p class="paragraph" data-aos="fade-up" data-aos-duration="500">Soy programador Full Stack y aprendiz de
                     desarrollo de software desde hace 2 años. Mi
                     meta es mejorar mi nivel como desarrollador. Soy proactivo, confiable, me gusta trabajar en
                     equipo, aprender sobre las nuevas tecnologías y
@@ -79,37 +83,30 @@
                 <p class="paragraph">En esta sección puedes observar cada una de las tecnologías que trabajo hasta el
                     momento.</p>
                 <div class="skills-container">
-                    <div class="icon-container">
-                        <i class="fa-brands fa-java skill-icon"></i>
-                        <p class="icon-name">Java</p>
+                    <div data-aos="fade-up" data-aos-duration="200" class="icon-container">
+                        <i class="fa-brands fa-java skill-icon" title="Java"></i>
                     </div>
-                    <div class="icon-container">
-                        <i class="fa-brands fa-html5 skill-icon"></i>
-                        <p class="icon-name">HTML</p>
+                    <div class="icon-container" data-aos="fade-up" data-aos-duration="300">
+                        <i class="fa-brands fa-html5 skill-icon" title="HTML5"></i>
                     </div>
-                    <div class="icon-container">
-                        <i class="fa-brands fa-css3-alt skill-icon"></i>
-                        <p class="icon-name">CSS</p>
+                    <div class="icon-container" data-aos="fade-up" data-aos-duration="400">
+                        <i class="fa-brands fa-css3-alt skill-icon" title="CSS3"></i>
                     </div>
-                    <div class="icon-container">
-                        <i class="fa-brands fa-square-js skill-icon"></i>
-                        <p class="icon-name">JavaScript</p>
+                    <div class="icon-container" data-aos="fade-up" data-aos-duration="500">
+                        <i class="fa-brands fa-square-js skill-icon" title="JavaScript"></i>
                     </div>
-                    <div class="icon-container">
-                        <i class="fa-brands fa-angular skill-icon"></i>
-                        <p class="icon-name">Angular</p>
+                    <div class="icon-container" data-aos="fade-up" data-aos-duration="600">
+                        <i class="fa-brands fa-angular skill-icon" title="Angular"></i>
                     </div>
-                    <div class="icon-container">
-                        <i class="fa-brands fa-git-alt skill-icon"></i>
-                        <p class="icon-name">Git</p>
+                    <div class="icon-container" data-aos="fade-up" data-aos-duration="700">
+                        <i class="fa-brands fa-git-alt skill-icon" title="Git"></i>
                     </div>
-                    <div class="icon-container">
-                        <img src="icons/springboot.png" class="spring-boot-i skill-icon" alt="spring_img">
-                        <p class="icon-name">Spring Boot</p>
+                    <div class="icon-container" data-aos="fade-up" data-aos-duration="800">
+                        <img src="icons/springboot.png" class="spring-boot-i skill-icon" alt="spring_img"
+                            title="Spring Boot">
                     </div>
-                    <div class="icon-container">
-                        <img src="icons/mysql.png" class="mysql-i skill-icon" alt="mysql_img">
-                        <p class="icon-name">MySQL</p>
+                    <div class="icon-container" data-aos="fade-up" data-aos-duration="900">
+                        <img src="icons/mysql.png" class="mysql-i skill-icon" alt="mysql_img" title="MySQL">
                     </div>
 
                 </div>
@@ -121,30 +118,44 @@
             <div class="container">
                 <h2 class="title">Proyectos</h2>
                 <div class="cards-container">
-                    <div class="card card-1">
-                        <a class="card-link" href="https://github.com/WaldoCuevas/StockTracking" target="_blank"
-                            rel="noopener noreferrer">
+                    <div class="card card-1" data-aos="zoom-in-up" data-aos-anchor-placement="center-bottom">
+                        <div class="card-link">
 
                             <h4>StockTracking</h4>
-                            <p class="paragraph-project">Es una aplicación que permite realizar el seguimiento de Stock
-                                de la medicina usada en un Tambo.</p>
+                            <div class="project-info">
+                                <p>Es una aplicación que permite realizar el seguimiento de Stock
+                                    de la medicina usada en un Tambo.
+                                </p>
+                                <a class="link-project" href="https://github.com/WaldoCuevas/StockTracking"
+                                    target="_blank" rel="noopener noreferrer" aria-label="more information">
+                                    <i class="fa-brands fa-github"></i> Repo
+                                </a>
+                            </div>
 
-                        </a>
+                        </div>
                     </div>
-                    <div class="card card-2">
-                        <a class="card-link" href="https://lm4nu.github.io/Comunicate" target="_blank"
-                            rel="noopener noreferrer">
+                    <div class="card card-2" data-aos="zoom-in-up" data-aos-anchor-placement="center-bottom">
+                        <div class="card-link">
+
                             <h4>Comunicate</h4>
-                            <p class="paragraph-project">Es una aplicación web que permite a los usuarios en condiciones
-                                especiales mejorar su comunicacíon.</p>
-                        </a>
+                            <div class="project-info">
+                                <p>Es una aplicación web que permite a los usuarios en condiciones
+                                    especiales mejorar su comunicacíon.
+                                </p>
+                                <a class="link-project" href="https://lm4nu.github.io/Comunicate" target="_blank"
+                                    rel="noopener noreferrer" aria-label="more information">
+                                    <i class="fa-solid fa-eye"></i> Demo
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
 
         </article>
 
-        <article id="networks">
+        <footer id="networks">
 
             <div class="container">
                 <h2 class="title">Redes</h2>
@@ -152,34 +163,51 @@
 
                 <div class="container-networks">
                     <div class="containet-net">
-                        <i class="fa-brands fa-linkedin icon-network"></i>
                         <a class="link-network" href="https://www.linkedin.com/in/alejandro-dalzotto-44214a24b/"
-                            target="_blank">LinkedIn</a>
+                            target="_blank" aria-label="linkedin" title="LinkedIn">
+                            <span>
+                                <i class="fa-brands fa-linkedin icon-network"></i>
+                            </span>
+                        </a>
                     </div>
                     <div class="containet-net">
-                        <i class="fa-brands fa-facebook icon-network"></i>
-                        <a class="link-network" href="https://www.facebook.com/alejandro.dalzotto.1/"
-                            target="_blank">Facebook</a>
+                        <a class="link-network" href="https://www.facebook.com/alejandro.dalzotto.1/" target="_blank"
+                            aria-label="facebook" title="Facebook">
+                            <span>
+                                <i class="fa-brands fa-facebook icon-network"></i>
+                            </span>
+                        </a>
                     </div>
                     <div class="containet-net">
-                        <i class="fa-brands fa-instagram icon-network"></i>
-                        <a class="link-network" href="https://www.instagram.com/alejandrodalzotto/"
-                            target="_blank">Instagram</a>
+                        <a class="link-network" href="https://www.instagram.com/alejandrodalzotto/" target="_blank"
+                            aria-label="instagram" title="Instagram">
+                            <span>
+                                <i class="fa-brands fa-instagram icon-network"></i>
+                            </span>
+                        </a>
                     </div>
                     <div class="containet-net">
-                        <i class="fa-brands fa-github icon-network"></i>
-                        <a id="esto" class="link-network" href="https://github.com/AlejandroDalzotto" target="_blank">Github</a>
-                        
+                        <a class="link-network" href="https://github.com/AlejandroDalzotto" target="_blank"
+                            aria-label="github" title="Github">
+                            <span>
+                                <i class="fa-brands fa-github icon-network"></i>
+                            </span>
+                        </a>
+
                     </div>
 
                 </div>
             </div>
 
-        </article>
+        </footer>
 
     </section>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
