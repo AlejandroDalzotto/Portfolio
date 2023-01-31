@@ -13,5 +13,5 @@ Esta es mi página personal. Pensada para que quienes estén interesados en cono
 ## Librerías - Recursos:
 
 - Aos
-- Font awesone
+- Font awesome
 - Google Fonts
