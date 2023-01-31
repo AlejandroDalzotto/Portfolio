@@ -16,7 +16,7 @@
 <body class="scroll">
     <header>
         <div class="nav">
-            <button id="btn" class="btn-nav">
+            <button id="btn" class="btn-nav" aria-label="menu">
                 <span>
                     <i class="fa-solid fa-bars"></i>
                 </span>
@@ -55,7 +55,7 @@
     <section class="section">
 
         <article id="hero">
-            <img class="wallpaper-hero" src="imgs/hero-wallpaper.png" alt="wallpaper_hero">
+            <canvas class="hero__background"></canvas>
             <div class="container container-hero">
                 <img data-aos="fade-left" data-aos-duration="900" class="profile" src="imgs/profile.jpg" alt="picture">
                 <div data-aos="fade-right" data-aos-duration="900">
@@ -154,13 +154,17 @@
                         <figure>
                             <img class="img-education front-card" src="imgs/UTN_logo.jpg" alt="unt_image">
                             <figcaption class="back-card">
-                                <a class="diploma-link" href="https://files.deply.dev/files/baa83db5-e885-4385-94de-a1b939b0b07c-520ceb42-5a7b-41c3-ab63-71bf903de69a-certificado.jpg" target="_blank">
+                                <a class="diploma-link"
+                                    href="https://files.deply.dev/files/baa83db5-e885-4385-94de-a1b939b0b07c-520ceb42-5a7b-41c3-ab63-71bf903de69a-certificado.jpg"
+                                    target="_blank">
                                     <img src="icons/diploma.png" alt="diploma" title="Ver diploma">
                                 </a>
                                 <h3 class="title-card">Técnico en Programación</h3>
                                 <hr>
-                                <p class="paragraph-card">Esta carrera me ofrecio conocimientos y prácticas intensivas en diferentes tecnologías que me
-                                    permiten analizar un problema de procesamiento de datos y desarrollar una solución en un lenguaje apropiado.</p>
+                                <p class="paragraph-card">Esta carrera me ofrecio conocimientos y prácticas intensivas
+                                    en diferentes tecnologías que me
+                                    permiten analizar un problema de procesamiento de datos y desarrollar una solución
+                                    en un lenguaje apropiado.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -260,6 +264,34 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script src="https://npmcdn.com/particlesjs@2.2.2/dist/particles.min.js"></script>
+    <script>
+        window.onload = function () {
+            Particles.init({
+                selector: '.hero__background',
+                color: '#17202A',
+                speed: 1,
+                maxParticles: 140,
+                connectParticles: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        options: {
+                            speed: 1,
+                            maxParticles: 40
+                        }
+                    }, {
+                        breakpoint: 375,
+                        options: {
+                            speed: 0.5,
+                            maxParticles: 30
+                        }
+                    }
+                ]
+            });
+        };
     </script>
 
 </body>

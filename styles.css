@@ -36,8 +36,6 @@ html {
 body {
     background-image: var(--gradient-background-color);
     background-attachment: fixed;
-    position: relative;
-    z-index: -100;
 }
 
 h1,
@@ -198,22 +196,23 @@ article {
     min-height: 95vh;
 }
 
+.hero__background {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
 .profile {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    transition: .3s transform ease-in-out;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
-}
-
-.profile:hover {
-    transform: scale(1.1);
-}
-
-.wallpaper-hero {
-    display: none;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
 }
 
 .container-hero {
@@ -377,11 +376,12 @@ figure .img-skill {
     width: 30px;
 }
 
-.back-card, .front-card {
+.back-card,
+.front-card {
     width: 100%;
-	height: 100%;
-	border-radius: 10px;
-	transition: all ease .5s;
+    height: 100%;
+    border-radius: 10px;
+    transition: all ease .5s;
     backface-visibility: hidden;
 }
 
@@ -395,14 +395,14 @@ figure .img-skill {
     top: 0;
     padding: 15px;
     transform: perspective(600px) rotateY(180deg);
-    background: rgba(223,234,241,0.7);
-	background: var(--card-gradient);
+    background: rgba(223, 234, 241, 0.7);
+    background: var(--card-gradient);
 }
 
 .back-card hr {
     height: 5px;
     width: 100%;
-	background: #fff;
+    background: #fff;
 }
 
 .educations-container {
@@ -418,17 +418,17 @@ figure .img-skill {
 }
 
 .education-card:hover figure {
-	transform: perspective(600px) rotateY(180deg);
-	-webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
-	box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+    transform: perspective(600px) rotateY(180deg);
+    -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
 }
 
 .education-card figure {
     height: 250px;
     position: relative;
-	transition: all ease .5s;
-	transform-style: preserve-3d;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
     transform: perspective(600px) rotateY(0deg);
 }
 
@@ -441,7 +441,7 @@ figure .img-skill {
 .cards-container {
     margin-top: 40px;
     display: flex;
-    width: 70vw;
+    width: 90vw;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
@@ -644,26 +644,6 @@ figure .img-skill {
         align-items: center;
         flex-direction: row-reverse;
         gap: 60px;
-    }
-
-    .wallpaper-hero {
-        display: block;
-        filter: brightness(0);
-        opacity: .17;
-        width: 65%;
-        position: absolute;
-        z-index: -1;
-        animation: pulse 3s ease-in-out infinite alternate;
-    }
-
-    @keyframes pulse {
-        from {
-            opacity: .05;
-        }
-
-        to {
-            opacity: .34;
-        }
     }
 
 

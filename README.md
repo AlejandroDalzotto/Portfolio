@@ -15,3 +15,4 @@ Esta es mi página personal. Pensada para que quienes estén interesados en cono
 - Aos
 - Font awesome
 - Google Fonts
+- particles.js
