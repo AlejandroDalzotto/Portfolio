@@ -342,9 +342,10 @@ figure .img-skill {
 /* Education */
 
 #education {
-    min-height: 50vh;
+    height: auto;
+    padding: 45px 0px;
     background-color: var(--section-color);
-    background-image: linear-gradient(0deg, #000000cc, #000000cc), url('imgs/education-wallapaper.png');
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('imgs/education-wallapaper.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
