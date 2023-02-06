@@ -439,10 +439,14 @@ figure .img-skill {
     min-height: 80vh;
 }
 
+#projects .container {
+    width: 100%;
+}
+
 .cards-container {
     margin-top: 40px;
     display: flex;
-    width: 90vw;
+    width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
