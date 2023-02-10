@@ -472,6 +472,7 @@ figure .img-skill {
     background-image: linear-gradient(to right, #0a0a0a, #2a2a2a);
     transition: all .3s ease-in-out;
     overflow: hidden;
+    position: relative;
 }
 
 .card-1 {
@@ -480,6 +481,19 @@ figure .img-skill {
 
 .card-2 {
     background-image: url('imgs/comunicate.webp');
+}
+
+.card-3 {
+    background-image: url('imgs/carrito-de-compras.jpg');
+    background-position: right;
+}
+
+.links-project {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .card-link {
