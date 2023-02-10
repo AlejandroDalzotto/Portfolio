@@ -12,7 +12,8 @@ Esta es mi página personal. Pensada para que quienes estén interesados en cono
 
 ## Librerías - Recursos:
 
-- Aos
-- Font awesome
-- Google Fonts
-- particles.js
+- [Aos](https://michalsnik.github.io/aos/)
+- [Font Awesome](https://fontawesome.com/)
+- [Google Fonts](https://fonts.google.com/about)
+- [particles.js](https://marcbruederlin.github.io/particles.js/)
+- [Simple Icons](https://github.com/simple-icons/simple-icons) ❤
