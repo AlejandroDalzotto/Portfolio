@@ -486,6 +486,10 @@ figure .img-skill {
     background-position: right;
 }
 
+.card-4 {
+    background-image: linear-gradient(0deg, #0000001a, #0000001a), url('imgs/galeria.jpg');
+}
+
 .links-project {
     width: 100%;
     display: flex;
